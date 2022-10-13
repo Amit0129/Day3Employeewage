@@ -37,7 +37,6 @@ namespace Employee
                 Console.WriteLine("Day" + totalWorkDay + "Employee Hour" + empHrs);
             }
             int totalEmpWage = totalEmpHrs * empRatePerHour;
-            Console.WriteLine(totalEmpHrs);
             Console.WriteLine("Total Employ Wage is : " + totalEmpWage);
         }
     }
