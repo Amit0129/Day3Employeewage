@@ -5,17 +5,29 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Employ Wage Calculation");
+
+
             int fullTime = 1;
+            int empRatePerHour = 20;
+
+            int empHrs = 0;
+            int empWage = 0;
+
+
             Random random = new Random();
             int empCheck = random.Next(0, 2);
+
+
             if (empCheck == fullTime)
             {
-                Console.WriteLine("Employee is present");
+                empHrs = 8;
             }
             else
             {
-                Console.WriteLine("Employee id absent");
+                empHrs = 0;
             }
+            empWage = empHrs * empRatePerHour;
+            Console.WriteLine("Employ Wage is : " + empWage);
         }
     }
 }
