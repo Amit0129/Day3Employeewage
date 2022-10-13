@@ -1,15 +1,15 @@
-﻿namespace Employee
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Employee
 {
     internal class Program
     {
+        public const int fullTime = 1;
+        public const int partTime = 2;
+        public const int empRatePerHour = 20;
         static void Main(string[] args)
         {
             Console.WriteLine("Employ Wage Calculation");
-
-
-            int fullTime = 1;
-            int partTime = 2;
-            int empRatePerHour = 20;
 
             int empHrs = 0;
             int empWage = 0;
@@ -19,17 +19,17 @@
             int empCheck = random.Next(0, 3);
 
 
-            if (empCheck == fullTime)
+            switch (empCheck)
             {
-                empHrs = 8;
-            }
-            else if (empCheck == partTime)
-            {
-                empHrs = 4;
-            }
-            else
-            {
-                empHrs = 0;
+                case fullTime:
+                    empHrs = 8;
+                    break;
+                case partTime:
+                    empHrs = 4;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
             }
             empWage = empHrs * empRatePerHour;
             Console.WriteLine("Employ Wage is : " + empWage);
