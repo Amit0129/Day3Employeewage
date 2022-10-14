@@ -6,10 +6,7 @@ namespace Employee
     {
         public const int fullTime = 1;
         public const int partTime = 2;
-        public const int empRatePerHour = 20;
-        public const int numOfWorkDay = 20;
-        public const int maxHourInMonth = 100;
-        public static int computeEmpWage()
+        public static int computeEmpWage(string company, int empRatePerHour, int numOfWorkDay, int maxHourInMonth)
         {
             Console.WriteLine("Employ Wage Calculation");
 
@@ -37,13 +34,13 @@ namespace Employee
                 Console.WriteLine("Day" + totalWorkDay + "Employee Hour" + empHrs);
             }
             int totalEmpWage = totalEmpHrs * empRatePerHour;
-            Console.WriteLine("Total Employ Wage is : " + totalEmpWage);
+            Console.WriteLine("Total Employ Wage for company " + company + " is " + totalEmpWage);
             return totalEmpWage;
         }
 
         static void Main(string[] args)
         {
-            computeEmpWage();
+            computeEmpWage("kumar", 20, 20,100);
         }
     }
 }
