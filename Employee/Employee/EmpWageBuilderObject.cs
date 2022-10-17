@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employee
 {
-    internal class EmpWageBuilderObject
+    public class EmpWageBuilderObject
     {
         public const int partTime = 1;
         public const int fullTime = 2;
